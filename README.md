@@ -18,7 +18,7 @@ A react/redux generator with all the build tooling goodies.
 * [react-css-modules](https://github.com/gajus/react-css-modules) - Scoped CSS modules
 * [babel](https://babeljs.io/) - ES6/JSX compiler
 * [webpack](https://webpack.github.io/) - Module bundler
-* [mocha](https://mochajs.org/) - Testing framework
+* [jest](https://facebook.github.io/jest/) - Test suite
 
 ## Dev Tooling
 

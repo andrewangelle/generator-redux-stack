@@ -48,7 +48,7 @@
     "eslint-config-airbnb": "^5.0.1",
     "eslint-plugin-react": "^3.16.1",
     "express": "^4.13.4",
-    "extract-text-webpack-plugin": "^1.0.1",
+    "extract-text-webpack-plugin": "^2.0.0-rc.2",
     <% if (requireFileLoader) { %>"file-loader": "^0.8.5",<% } %>
     "html-webpack-plugin": "^2.10.0",
     "isparta": "^4.0.0",
@@ -65,10 +65,10 @@
     "sass-loader": "^3.2.0",
     "sinon": "^1.17.3",
     "style-loader": "^0.13.0",
-    "webpack": "^1.12.13",
-    "webpack-dev-middleware": "^1.5.1",
-    <% if (requireApiServer) { %>"webpack-dev-server": "^1.14.1",<% } %>
-    "webpack-hot-middleware": "^2.7.1"
+    "webpack": "^2.2.1",
+    "webpack-dev-middleware": "^1.9.0",
+    <% if (requireApiServer) { %>"webpack-dev-server": "^2.2.0",<% } %>
+    "webpack-hot-middleware": "^2.16.1"
   },
   "dependencies": {
     "react": "^15.0.0",

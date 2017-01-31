@@ -14,7 +14,7 @@ export default class Main extends Component {
     const { styles } = this.props;
 
     return (
-      <div styleName='container'>
+      <div styleName="container">
         <Header />
         {this.props.children}
       </div>

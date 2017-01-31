@@ -1,8 +1,12 @@
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Main from '../components/Main';
 
-function mapStateToProps(/* state */) {
-  return {};
+@connect()
+export default class App extends Component {
+  render() {
+    return (
+      <Main {...this.props} />
+    );
+  }
 }
-
-export default connect(mapStateToProps)(Main);

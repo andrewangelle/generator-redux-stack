@@ -12,7 +12,7 @@ export default class Header extends Component {
   render() {
     return (
       <div>
-        <h2 styleName='h2'><%= appName %></h2>
+        <h2 styleName="h2"><%= appName %></h2>
 
         <Link to={'/'}>Home Page</Link> -&nbsp;
         <Link to={'/another'}>Another Page</Link>

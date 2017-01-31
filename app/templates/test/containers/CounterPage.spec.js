@@ -1,7 +1,7 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import renderer from 'react-test-renderer';
 import { mount } from 'enzyme';
+import renderer from 'react-test-renderer';
 import CounterPage from '../../src/containers/CounterPage';
 import configureStore from '../../src/store/configureStore';
 

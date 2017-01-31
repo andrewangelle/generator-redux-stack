@@ -5,10 +5,10 @@ import styles from '../style/counter.scss';
 @cssModules(styles)
 export default class Counter extends Component {
   static propTypes = {
+    counter: PropTypes.number.isRequired,
     increment: PropTypes.func.isRequired,
     incrementAsync: PropTypes.func.isRequired,
     decrement: PropTypes.func.isRequired,
-    counter: PropTypes.number.isRequired,
     styles: PropTypes.object
   };
 

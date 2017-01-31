@@ -8,9 +8,9 @@ describe('<Counter />', () => {
   it('should render', () => {
     const tree = renderer.create(
       <Counter
-        increment={() => {}}
-        incrementAsync={() => {}}
-        decrement={() => {}}
+        increment={() => false}
+        incrementAsync={() => false}
+        decrement={() => false}
         counter={0}
       />
     ).toJSON();
@@ -24,8 +24,8 @@ describe('<Counter />', () => {
     const component = mount(
       <Counter
         increment={increment}
-        incrementAsync={() => {}}
-        decrement={() => {}}
+        incrementAsync={() => false}
+        decrement={() => false}
         counter={0}
       />
     );
@@ -41,8 +41,8 @@ describe('<Counter />', () => {
 
     const component = mount(
       <Counter
-        increment={() => {}}
-        incrementAsync={() => {}}
+        increment={() => false}
+        incrementAsync={() => false}
         decrement={decrement}
         counter={0}
       />
@@ -59,8 +59,8 @@ describe('<Counter />', () => {
 
     const component = mount(
       <Counter
-        increment={() => {}}
-        decrement={() => {}}
+        increment={() => false}
+        decrement={() => false}
         incrementAsync={incrementAsync}
         counter={0}
       />

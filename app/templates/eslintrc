@@ -11,7 +11,12 @@
     "comma-dangle": [2, "never"],
     "no-shadow": 0
   },
+  "globals": {
+    "describe": true,
+    "it": true,
+    "expect": true
+  },
   "plugins": [
     "react"
-  ]
+  ],
 }

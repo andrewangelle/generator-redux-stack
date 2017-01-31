@@ -7,7 +7,7 @@ import configureStore from '../../src/store/configureStore';
 
 describe('<CounterPage />', () => {
   it('should display initial count', () => {
-    const store = configureStore({ counter:  0 });
+    const store = configureStore({ counter: 0 });
 
     const tree = renderer.create(
       <Provider store={store}>
@@ -19,7 +19,7 @@ describe('<CounterPage />', () => {
   });
 
   it('should display updated count after increment button click', () => {
-    const store = configureStore({ counter:  0 });
+    const store = configureStore({ counter: 0 });
 
     const container = mount(
       <Provider store={store}>
@@ -35,7 +35,7 @@ describe('<CounterPage />', () => {
   });
 
   it('should display updated count after decrement button click', () => {
-    const store = configureStore({ counter:  0 });
+    const store = configureStore({ counter: 0 });
 
     const container = mount(
       <Provider store={store}>

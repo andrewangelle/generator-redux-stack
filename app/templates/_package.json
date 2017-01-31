@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "start": "node server/index.js",
-    "clean": "rimraf lib dist coverage",
+    "clean": "rimraf lib dist",
     "lint": "eslint src test",
     "test": "cross-env NODE_ENV=test jest",
     "test:update": "cross-env NODE_ENV=test jest -u",

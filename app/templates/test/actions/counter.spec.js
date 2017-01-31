@@ -1,13 +1,13 @@
 import { spy } from 'sinon';
-import * as actions from '../../src/actions/counter';
+import { increment, decrement } from '../../src/actions/counter';
 
 describe('Counter actions', () => {
   it('should create increment action', () => {
-    expect(actions.increment()).toEqual({ type: 'INCREMENT_COUNTER' });
+    expect(increment()).toEqual({ type: increment.toString() });
   });
 
   it('should create decrement action', () => {
-    expect(actions.decrement()).toEqual({ type: 'DECREMENT_COUNTER' });
+    expect(decrement()).toEqual({ type: decrement.toString() });
   });
 
   it('should create increment action async', done => {
@@ -18,7 +18,7 @@ describe('Counter actions', () => {
     fn(dispatch);
 
     setTimeout(() => {
-      expect(dispatch.calledWith({ type: 'INCREMENT_COUNTER' })).toEqual(true);
+      expect(dispatch.calledWith({ type: increment.toString() })).toEqual(true);
       done();
     }, 5);
   });

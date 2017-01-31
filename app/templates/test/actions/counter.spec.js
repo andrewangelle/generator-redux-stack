@@ -10,9 +10,10 @@ describe('Counter actions', () => {
     expect(actions.decrement()).toEqual({ type: 'DECREMENT_COUNTER' });
   });
 
-  it('should create incrementAsync action', (done) => {
+  it('should create increment action async', done => {
     const fn = actions.incrementAsync(1);
     expect(fn).toBeInstanceOf(Function);
+
     const dispatch = spy();
     fn(dispatch);
 

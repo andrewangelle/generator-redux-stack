@@ -1,5 +1,5 @@
 import { spy } from 'sinon';
-import { increment, decrement } from '../../src/actions/counter';
+import { increment, decrement, incrementAsync } from '../../src/actions/counter';
 
 describe('Counter actions', () => {
   it('should create increment action', () => {
@@ -11,7 +11,7 @@ describe('Counter actions', () => {
   });
 
   it('should create increment action async', done => {
-    const fn = actions.incrementAsync(1);
+    const fn = incrementAsync(1);
     expect(fn).toBeInstanceOf(Function);
 
     const dispatch = spy();

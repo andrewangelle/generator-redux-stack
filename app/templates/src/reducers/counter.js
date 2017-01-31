@@ -1,13 +1,9 @@
-import { createReducer } from 'redux-create-reducer';
-import { INCREMENT_COUNTER, DECREMENT_COUNTER } from '../actions/counter';
+import { handleActions } from 'redux-actions';
+import { increment, decrement } from '../actions/counter';
 
 const initialState = 0;
 
-export default createReducer(initialState, {
-  [INCREMENT_COUNTER](state) {
-    return state + 1;
-  },
-  [DECREMENT_COUNTER](state) {
-    return state - 1;
-  }
-});
+export default handleActions({
+  [increment]: state => state + 1,
+  [decrement]: state => state - 1
+}, initialState);

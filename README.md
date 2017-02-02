@@ -2,6 +2,8 @@
 
 A react/redux generator with all the build tooling goodies.
 
+[![Circle CI](https://circleci.com/gh/zakangelle/generator-redux-stack/tree/master.svg?style=shield)](https://circleci.com/gh/zakangelle/generator-redux-stack/tree/master)
+
 <img src='https://dl.dropboxusercontent.com/s/4w9bsn1ti8zbz7b/octo.png' width='400px'>
 
 ## Requirements

@@ -66,8 +66,7 @@
     "sinon": "^1.17.3",
     "style-loader": "^0.13.0",
     "webpack": "^2.2.1",
-    "webpack-dev-middleware": "^1.9.0",
-    "webpack-hot-middleware": "^2.16.1"
+    "webpack-dev-server": "^2.2.0"
   },
   "dependencies": {
     "react": "^15.0.0",

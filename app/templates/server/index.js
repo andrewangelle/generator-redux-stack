@@ -1,10 +1,7 @@
-/* eslint no-console: 0 */
 const path = require('path');
-const express = require('express');
 const webpack = require('webpack');
-const historyApiFallback = require('connect-history-api-fallback');
+const WebpackDevServer = require('webpack-dev-server');
 
-const app = express();
 const port = process.env.PORT || 3000;
 
 var config = process.env.NODE_ENV === 'production'
@@ -13,19 +10,12 @@ var config = process.env.NODE_ENV === 'production'
 
 const compiler = webpack(config);
 
-app.use(historyApiFallback({ verbose: false }));
-
-app.use(require('webpack-dev-middleware')(compiler, {
+var bundler = new WebpackDevServer(compiler, {
   publicPath: config.output.publicPath,
   stats: {
     colors: true,
-  }
-}));
-
-app.use(require('webpack-hot-middleware')(compiler));
-
-app.get('*', (req, res) => {
-  res.sendFile('index.html', { root: process.env.PWD + '/dist' });
+  },
+  historyApiFallback: true
 });
 
-app.listen(port);
+bundler.listen(port);

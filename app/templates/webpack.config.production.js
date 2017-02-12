@@ -12,13 +12,13 @@ module.exports = {
     publicPath: '/'
   },
   plugins: [
-    new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify('production')
       }
     }),
     new webpack.optimize.UglifyJsPlugin({
+      sourceMap: true,
       compressor: {
         screw_ie8: true,
         warnings: false
@@ -33,19 +33,16 @@ module.exports = {
       allChunks: true
     })
   ],
-  resolve: {
-    extensions: ['.js']
-  },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.js$/,
-        loaders: ['babel-loader'],
+        use: ['babel-loader'],
         exclude: /node_modules/,
       },
       {
         test: /\.scss$/,
-        loader: ExtractTextPlugin.extract({
+        use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
           use: 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!sass-loader'
         })

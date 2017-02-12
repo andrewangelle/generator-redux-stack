@@ -4,15 +4,21 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   devtool: 'cheap-module-source-map',
-  entry: [
-    'webpack-dev-server/client?http://localhost:3000/',
-    'webpack/hot/dev-server',
-    './src/index'
-  ],
+  entry: {
+    app: './src/index'
+  },
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'bundle.[hash].js',
     publicPath: '/'
+  },
+  devServer: {
+    port: 3000,
+    hot: true,
+    stats: {
+      colors: true,
+    },
+    historyApiFallback: true
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
@@ -27,19 +33,16 @@ module.exports = {
       filename: 'index.html'
     })
   ],
-  resolve: {
-    extensions: ['.js'],
-  },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.js$/,
-        loaders: ['babel-loader'],
+        use: ['babel-loader'],
         exclude: /node_modules/
       },
       {
         test: /\.scss$/,
-        loaders: [
+        use: [
           'style-loader?sourceMap',
           'css-loader?sourceMap&modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]!sass-loader'
         ]

@@ -41,10 +41,6 @@ describe('generator-redux-stack', () => {
     assert.file(['build/index.html']);
   });
 
-  it('generates server files', () => {
-    assert.file(['server/index.js']);
-  });
-
   it('generates front end config files', () => {
     assert.file(['src/config/routes.js']);
   });

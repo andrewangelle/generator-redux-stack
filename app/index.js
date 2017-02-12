@@ -42,7 +42,6 @@ module.exports = yeoman.generators.Base.extend({
       this.template('README.md');
       this.template('babelrc', '.babelrc');
       this.directory('build', 'build');
-      this.directory('server', 'server');
       this.directory('src', 'src');
       this.directory('test', 'test');
 

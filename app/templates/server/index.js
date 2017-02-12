@@ -11,6 +11,7 @@ var config = process.env.NODE_ENV === 'production'
 const compiler = webpack(config);
 
 var bundler = new WebpackDevServer(compiler, {
+  hot: true,
   publicPath: config.output.publicPath,
   stats: {
     colors: true,

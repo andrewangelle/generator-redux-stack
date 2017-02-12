@@ -55,8 +55,6 @@ Boot up the app at [http://localhost:3000](http://localhost:3000):
 $ npm start
 ```
 
-If you opt in to the API server, a sample endpoint will be set up at [http://localhost:3000/api/test](http://localhost:3000/api/test).
-
 ## License
 
 MIT

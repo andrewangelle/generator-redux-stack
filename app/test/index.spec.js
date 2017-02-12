@@ -7,7 +7,6 @@ beforeEach(() => {
     .withPrompts({
       appName: 'skullin',
       appDescription: 'skullin hard',
-      requireApiServer: false,
       requireFileLoader: false
     });
 });

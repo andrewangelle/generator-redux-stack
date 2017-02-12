@@ -21,12 +21,6 @@ module.exports = yeoman.generators.Base.extend({
         message: 'What\'s the app description?'
       },
       {
-        name: 'requireApiServer',
-        type: 'confirm',
-        message: 'Do you need an API server?',
-        default: false
-      },
-      {
         name: 'requireFileLoader',
         type: 'confirm',
         message: 'Do you need a static asset loader to import images and other binary files?',
@@ -34,10 +28,8 @@ module.exports = yeoman.generators.Base.extend({
       }
     ],
     function(props) {
-      var asyncCount = 0;
       this.appName = props.appName;
       this.appDescription = props.appDescription;
-      this.requireApiServer = props.requireApiServer;
       this.requireFileLoader = props.requireFileLoader;
 
       this.template('editorconfig', '.editorconfig');
@@ -46,7 +38,6 @@ module.exports = yeoman.generators.Base.extend({
       this.template('build/index.html');
       this.template('webpack.config.js');
       this.template('webpack.config.production.js');
-      // needed so npm doesn't try to use it and fail
       this.template('_package.json', 'package.json');
       this.template('README.md');
       this.template('babelrc', '.babelrc');

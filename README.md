@@ -13,7 +13,6 @@ A react/redux generator with all the build tooling goodies.
 
 ## Tech Stack
 
-* [express](http://expressjs.com/) - Server HTTP framework
 * [react](https://facebook.github.io/react/) - View layer
 * [redux](https://github.com/reactjs/redux) - State management
 * [sass](http://sass-lang.com/) - CSS preprocessor

@@ -5,14 +5,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   devtool: 'cheap-module-source-map',
   entry: [
-  <% if (requireApiServer) { %>
-    'webpack-dev-server/client?http://localhost:3000/',
-    'webpack/hot/dev-server',
-    './src/index'
-  <% } else { %>
     'webpack-hot-middleware/client',
     './src/index'
-  <% } %>
   ],
   output: {
     path: path.join(__dirname, 'dist'),

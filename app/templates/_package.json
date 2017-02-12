@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "license": "MIT",
   "scripts": {
-    "start": "node server/index.js",
+    "start": "webpack-dev-server",
     "clean": "rimraf lib dist",
     "lint": "eslint src test",
     "test": "cross-env NODE_ENV=test jest",

@@ -19,18 +19,11 @@ module.exports = yeoman.generators.Base.extend({
       {
         name: 'appDescription',
         message: 'What\'s the app description?'
-      },
-      {
-        name: 'requireFileLoader',
-        type: 'confirm',
-        message: 'Do you need a static asset loader to import images and other binary files?',
-        default: false
       }
     ],
     function(props) {
       this.appName = props.appName;
       this.appDescription = props.appDescription;
-      this.requireFileLoader = props.requireFileLoader;
 
       this.template('editorconfig', '.editorconfig');
       this.template('gitignore', '.gitignore');

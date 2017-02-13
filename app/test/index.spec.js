@@ -6,8 +6,7 @@ beforeEach(() => {
   return helpers.run(path.join(__dirname, '../index.js'))
     .withPrompts({
       appName: 'skullin',
-      appDescription: 'skullin hard',
-      requireFileLoader: false
+      appDescription: 'skullin hard'
     });
 });
 

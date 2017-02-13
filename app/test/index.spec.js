@@ -36,16 +36,16 @@ describe('generator-redux-stack', () => {
     assert.fileContent('package.json', /"description": "skullin hard"/);
   });
 
-  it('generates build files', () => {
-    assert.file(['build/index.html']);
-  });
-
   it('generates front end config files', () => {
     assert.file(['src/config/routes.js']);
   });
 
-  it('generates front end index file', () => {
+  it('generates index file', () => {
     assert.file(['src/index.js']);
+  });
+
+  it('generates html file', () => {
+    assert.file(['src/index.html']);
   });
 
   it('generates actions', () => {

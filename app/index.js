@@ -28,7 +28,6 @@ module.exports = yeoman.generators.Base.extend({
       this.template('editorconfig', '.editorconfig');
       this.template('gitignore', '.gitignore');
       this.template('eslintrc', '.eslintrc');
-      this.template('build/index.html');
       this.template('webpack.config.js');
       this.template('webpack.config.production.js');
       this.template('_package.json', 'package.json');

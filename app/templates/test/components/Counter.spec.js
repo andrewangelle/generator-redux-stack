@@ -60,8 +60,8 @@ describe('<Counter />', () => {
     const component = mount(
       <Counter
         increment={() => false}
-        decrement={() => false}
         incrementAsync={incrementAsync}
+        decrement={() => false}
         counter={0}
       />
     );

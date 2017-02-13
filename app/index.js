@@ -1,7 +1,5 @@
-'use strict';
-
-var yeoman = require('yeoman-generator');
-var _s = require('underscore.string');
+const yeoman = require('yeoman-generator');
+const _s = require('underscore.string');
 
 module.exports = yeoman.generators.Base.extend({
   init: function() {
@@ -12,16 +10,14 @@ module.exports = yeoman.generators.Base.extend({
         name: 'appName',
         message: 'What\'s the name of your app?',
         default: this.appname.replace(/\s/g, '-'),
-        filter: function(val) {
-          return _s.slugify(val);
-        }
+        filter: val => _s.slugify(val)
       },
       {
         name: 'appDescription',
         message: 'What\'s the app description?'
       }
     ],
-    function(props) {
+    props => {
       this.appName = props.appName;
       this.appDescription = props.appDescription;
 
@@ -38,8 +34,7 @@ module.exports = yeoman.generators.Base.extend({
       this.directory('test', 'test');
 
       cb();
-
-    }.bind(this));
+    });
   },
   install: function() {
     this.installDependencies({ bower: false });

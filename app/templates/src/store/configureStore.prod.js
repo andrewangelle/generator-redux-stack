@@ -6,9 +6,6 @@ import rootReducer from '../reducers';
 
 const router = routerMiddleware(browserHistory);
 
-/**
- * Creates a preconfigured store.
- */
 export default function configureStore(initialState) {
   return createStore(
     rootReducer,

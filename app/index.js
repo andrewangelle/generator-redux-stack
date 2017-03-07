@@ -24,11 +24,12 @@ module.exports = yeoman.generators.Base.extend({
       this.template('editorconfig', '.editorconfig');
       this.template('gitignore', '.gitignore');
       this.template('eslintrc', '.eslintrc');
+      this.template('babelrc', '.babelrc');
+      this.template('jestrc', '.jestrc');
       this.template('webpack.config.js');
       this.template('webpack.config.production.js');
       this.template('_package.json', 'package.json');
       this.template('README.md');
-      this.template('babelrc', '.babelrc');
       this.directory('build', 'build');
       this.directory('src', 'src');
       this.directory('test', 'test');

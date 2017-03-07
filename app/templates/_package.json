@@ -3,13 +3,11 @@
   "version": "0.0.0",
   "description": "<%= appDescription %>",
   "main": "src/index.js",
-  "license": "MIT",
   "scripts": {
     "start": "webpack-dev-server",
     "clean": "rimraf dist",
     "lint": "eslint src test",
-    "test": "cross-env NODE_ENV=test jest",
-    "test:update": "cross-env NODE_ENV=test jest -u",
+    "test": "cross-env NODE_ENV=test jest --config .jestrc",
     "test:watch": "npm test -- --watchAll",
     "check": "npm run lint && npm test",
     "build": "npm run clean && cross-env NODE_ENV=production webpack src/index.js --config webpack.config.production.js",
@@ -17,18 +15,6 @@
     "postversion": "git push && git push --tags && npm run clean",
     "prepublish": "npm run clean && npm run build"
   },
-  "jest": {
-    "testRegex": "(/test/.*|(\\.|/))\\.spec\\.js?$",
-    "moduleFileExtensions": [
-      "js",
-      "json"
-    ],
-    "moduleNameMapper": {
-      "^.+\\.(scss)$": "<rootDir>/node_modules/jest-css-modules"
-    }
-  },
-  "devEngines": {},
-  "engines": {},
   "devDependencies": {
     "babel-cli": "^6.22.0",
     "babel-eslint": "^5.0.0",
@@ -46,7 +32,7 @@
     "eslint-plugin-react": "^3.16.1",
     "extract-text-webpack-plugin": "^2.0.0-rc.2",
     "html-webpack-plugin": "^2.10.0",
-    "jest": "^18.1.0",
+    "jest": "^19.0.0",
     "jest-css-modules": "^1.1.0",
     "node-sass": "^3.7.0",
     "react-addons-test-utils": "^15.0.0",

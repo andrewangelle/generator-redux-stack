@@ -19,6 +19,10 @@ describe('generator-redux-stack', () => {
     assert.file(['.eslintrc']);
   });
 
+  it('generates jest config file', () => {
+    assert.file(['.jestrc']);
+  });
+
   it('generates gitignore file', () => {
     assert.file(['.gitignore']);
   });

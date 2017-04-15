@@ -1,12 +1,11 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { browserHistory } from 'react-router';
-import { syncHistoryWithStore } from 'react-router-redux';
+import createHistory from 'history/createBrowserHistory';
 import configureStore from './store/configureStore';
-import Root from './containers/Root';
+import App from './containers/App';
 
 const store = configureStore();
-const history = syncHistoryWithStore(browserHistory, store);
+const history = createHistory();
 
 if (process.env.NODE_ENV === 'development') {
   const createDevToolsWindow = require('./utils/createDevToolsWindow').default;
@@ -14,6 +13,6 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 render(
-  <Root store={store} history={history} />,
+  <App store={store} history={history} />,
   document.getElementById('root')
 );

@@ -8,13 +8,13 @@ module.exports = yeoman.generators.Base.extend({
     this.prompt([
       {
         name: 'appName',
-        message: 'What\'s the name of your app?',
+        message: 'App name',
         default: this.appname.replace(/\s/g, '-'),
         filter: val => _s.slugify(val)
       },
       {
         name: 'appDescription',
-        message: 'What\'s the app description?'
+        message: 'App description'
       }
     ],
     props => {

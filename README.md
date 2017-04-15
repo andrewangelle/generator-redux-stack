@@ -44,7 +44,7 @@ Make a folder for your app:
 $ mkdir app-name && cd app-name
 ```
 
-Generate the scaffolding:
+Generate the app scaffolding:
 
 ```sh
 $ yo redux-stack
@@ -54,6 +54,26 @@ Boot up the app:
 
 ```sh
 $ npm start
+```
+
+## Module Generators
+
+Generate a new container:
+
+```sh
+$ yo redux-stack:container
+```
+
+Generate a new component:
+
+```sh
+$ yo redux-stack:component
+```
+
+Generate a new set of actions with corresponding reducer:
+
+```sh
+$ yo redux-stack:actions
 ```
 
 ## License

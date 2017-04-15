@@ -62,16 +62,14 @@ describe('generator-redux-stack', () => {
       'src/containers/App.js',
       'src/containers/CounterPage.js',
       'src/containers/DevTools.js',
-      'src/containers/NotFoundPage.js',
-      'src/containers/Root.js'
+      'src/containers/NotFoundPage.js'
     ]);
   });
 
   it('generates components', () => {
     assert.file([
       'src/components/Counter.js',
-      'src/components/Header.js',
-      'src/components/Main.js'
+      'src/components/Header.js'
     ]);
   });
 

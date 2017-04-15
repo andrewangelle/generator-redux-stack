@@ -8,12 +8,13 @@
 
 ## Tech Stack
 
-* [react](https://facebook.github.io/react/) - View layer
+* [react 15](https://facebook.github.io/react/) - View layer
+* [react-router 4](https://reacttraining.com/react-router/web/guides/quick-start) - Router
 * [redux](https://github.com/reactjs/redux) - State management
 * [sass](http://sass-lang.com/) - CSS preprocessor
 * [react-css-modules](https://github.com/gajus/react-css-modules) - Scoped CSS modules
 * [babel](https://babeljs.io/) - ES6/JSX compiler
-* [webpack](https://webpack.github.io/) - Module bundler
+* [webpack 2](https://webpack.github.io/) - Module bundler
 * [jest](https://facebook.github.io/jest/) - Test suite
 
 ## Setup

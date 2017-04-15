@@ -62,7 +62,8 @@ describe('generator-redux-stack', () => {
       'src/containers/App.js',
       'src/containers/CounterPage.js',
       'src/containers/DevTools.js',
-      'src/containers/NotFoundPage.js'
+      'src/containers/NotFoundPage.js',
+      'src/containers/Root.js',
     ]);
   });
 

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'react-router-redux';
 import App from '../containers/App';
+import DevTools from '../containers/DevTools';
 import routes from '../config/routes.js';
 
 export default class Root extends Component {
@@ -17,7 +18,13 @@ export default class Root extends Component {
     return (
       <Provider store={store}>
         <ConnectedRouter history={history}>
-          <App>{routes}</App>
+          <div>
+            <App>{routes}</App>
+
+            {process.env.NODE_ENV === 'development' &&
+              <DevTools />
+            }
+          </div>
         </ConnectedRouter>
       </Provider>
     );

@@ -98,7 +98,6 @@ describe('generator-redux-stack', () => {
 
   it('generates utils', () => {
     assert.file([
-      'src/utils/createDevToolsWindow.js',
       'src/utils/wrapActionCreators.js'
     ]);
   });

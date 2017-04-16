@@ -1,4 +1,3 @@
-import { spy } from 'sinon';
 import { placeholder } from '../../src/actions/<%= name %>';
 
 describe('<%= name %> actions', () => {

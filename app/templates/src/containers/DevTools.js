@@ -11,6 +11,7 @@ export default createDevTools(
     toggleVisibilityKey="ctrl-h"
     changePositionKey="ctrl-m"
     changeMonitorKey="ctrl-c"
+    defaultIsVisible={false}
   >
     <LogMonitor />
     <DiffMonitor />

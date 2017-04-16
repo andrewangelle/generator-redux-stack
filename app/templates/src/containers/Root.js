@@ -2,8 +2,10 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'react-router-redux';
+import { createDevTools } from 'redux-devtools';
 import App from '../containers/App';
 import DevTools from '../containers/DevTools';
+import { ImportExportTool } from '../containers/DevTools';
 import routes from '../config/routes.js';
 
 export default class Root extends Component {
@@ -22,7 +24,10 @@ export default class Root extends Component {
             <App>{routes}</App>
 
             {process.env.NODE_ENV === 'development' &&
-              <DevTools />
+              <div>
+                <DevTools />
+                <ImportExportTool />
+              </div>
             }
           </div>
         </ConnectedRouter>

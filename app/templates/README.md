@@ -11,6 +11,7 @@
 * [react (v15)](https://facebook.github.io/react/) - View layer
 * [react-router (v4)](https://reacttraining.com/react-router/web/guides/quick-start) - Router
 * [redux](https://github.com/reactjs/redux) - State management
+* [redux-thunk](https://github.com/gaearon/redux-thunk) - Async actions
 * [sass](http://sass-lang.com/) - CSS preprocessor
 * [react-css-modules](https://github.com/gajus/react-css-modules) - Scoped CSS modules
 * [babel](https://babeljs.io/) - ES6/JSX compiler

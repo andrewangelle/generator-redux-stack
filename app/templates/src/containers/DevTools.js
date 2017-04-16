@@ -1,9 +1,10 @@
 import React from 'react';
 import { createDevTools } from 'redux-devtools';
 import DockMonitor from 'redux-devtools-dock-monitor';
+import LogMonitor from 'redux-devtools-log-monitor';
 import DiffMonitor from 'redux-devtools-diff-monitor';
 import SliderMonitor from 'redux-slider-monitor';
-import LogMonitor from 'redux-devtools-log-monitor';
+import ImportExportMonitor from 'redux-import-export-monitor';
 
 export default createDevTools(
   <DockMonitor
@@ -15,4 +16,8 @@ export default createDevTools(
     <DiffMonitor />
     <SliderMonitor />
   </DockMonitor>
+);
+
+export const ImportExportTool = createDevTools(
+  <ImportExportMonitor openModalKey='ctrl-e' />
 );

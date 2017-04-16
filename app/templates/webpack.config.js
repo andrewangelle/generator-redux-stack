@@ -1,8 +1,12 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const detect = require('detect-port');
+const portfinder = require('portfinder');
 
-module.exports = {
+const DEFAULT_PORT = 3000;
+
+const config = port => ({
   devtool: 'cheap-module-source-map',
   entry: {
     app: './src/index'
@@ -13,12 +17,11 @@ module.exports = {
     publicPath: '/'
   },
   devServer: {
-    port: 3000,
+    port,
     hot: true,
-    stats: {
-      colors: true,
-    },
-    historyApiFallback: true
+    historyApiFallback: true,
+    stats: 'errors-only',
+    clientLogLevel: 'error'
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
@@ -49,4 +52,12 @@ module.exports = {
       }
     ]
   },
-};
+});
+
+module.exports = detect(DEFAULT_PORT).then(port => {
+  if (port === DEFAULT_PORT) {
+    return config(DEFAULT_PORT);
+  }
+
+  return portfinder.getPortPromise().then(port => config(port));
+});

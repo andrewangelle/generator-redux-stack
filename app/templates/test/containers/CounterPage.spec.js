@@ -31,7 +31,7 @@ describe('<CounterPage />', () => {
     const span = container.find('span');
 
     button.simulate('click');
-    expect(span.text()).toEqual('Clicked: 1 times');
+    expect(span.text()).toEqual('Counter: 1');
   });
 
   it('should display updated count after decrement button click', () => {
@@ -47,6 +47,6 @@ describe('<CounterPage />', () => {
     const span = container.find('span');
 
     button.simulate('click');
-    expect(span.text()).toEqual('Clicked: -1 times');
+    expect(span.text()).toEqual('Counter: -1');
   });
 });

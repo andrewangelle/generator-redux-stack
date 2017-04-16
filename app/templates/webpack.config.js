@@ -19,7 +19,9 @@ const config = port => ({
   devServer: {
     port,
     hot: true,
-    historyApiFallback: true
+    historyApiFallback: true,
+    stats: 'errors-only',
+    clientLogLevel: 'error'
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),

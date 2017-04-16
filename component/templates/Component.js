@@ -4,7 +4,7 @@ export default class <%= name %> extends Component {
   render() {
     return (
       <div>
-        <h2><%= name %></h2>
+        <h4><%= name %></h4>
       </div>
     );
   }

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'react-router-redux';
-import { createDevTools } from 'redux-devtools';
 import App from '../containers/App';
 import DevTools from '../containers/DevTools';
 import { ImportExportTool } from '../containers/DevTools';

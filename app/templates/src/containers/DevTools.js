@@ -8,9 +8,9 @@ import ImportExportMonitor from 'redux-import-export-monitor';
 
 export default createDevTools(
   <DockMonitor
-    toggleVisibilityKey='ctrl-h'
-    changePositionKey='ctrl-m'
-    changeMonitorKey='ctrl-c'
+    toggleVisibilityKey="ctrl-h"
+    changePositionKey="ctrl-m"
+    changeMonitorKey="ctrl-c"
   >
     <LogMonitor />
     <DiffMonitor />
@@ -19,5 +19,5 @@ export default createDevTools(
 );
 
 export const ImportExportTool = createDevTools(
-  <ImportExportMonitor openModalKey='ctrl-e' />
+  <ImportExportMonitor openModalKey="ctrl-e" />
 );

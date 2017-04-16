@@ -37,7 +37,6 @@
     "jest-css-modules": "^1.1.0",
     "node-sass": "^3.7.0",
     "portfinder": "^1.0.13",
-    "react-addons-test-utils": "^15.0.0",
     "react-css-modules": "^3.7.6",
     "react-test-renderer": "^15.4.2",
     "redux-devtools": "^3.1.1",

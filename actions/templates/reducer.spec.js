@@ -9,4 +9,8 @@ describe('<%= name %> reducers', () => {
   it('should handle placeholder', () => {
     expect(<%= name %>(undefined, { type: placeholder })).toEqual(null);
   });
+
+  it('should handle unknown action type', () => {
+    expect(<%= name %>(undefined, { type: 'unknown' })).toEqual(null);
+  });
 });

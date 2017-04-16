@@ -1,6 +1,6 @@
 import React from 'react';
 import { spy } from 'sinon';
-import { mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import renderer from 'react-test-renderer';
 import Counter from '../../src/components/Counter';
 
@@ -21,7 +21,7 @@ describe('<Counter />', () => {
   it('should call increment callback when button is clicked', () => {
     const increment = spy();
 
-    const component = mount(
+    const component = shallow(
       <Counter
         increment={increment}
         incrementAsync={() => false}
@@ -39,7 +39,7 @@ describe('<Counter />', () => {
   it('should call decrement callback when button is clicked', () => {
     const decrement = spy();
 
-    const component = mount(
+    const component = shallow(
       <Counter
         increment={() => false}
         incrementAsync={() => false}
@@ -57,7 +57,7 @@ describe('<Counter />', () => {
   it('should call incrementAsync callback when button is clicked', () => {
     const incrementAsync = spy();
 
-    const component = mount(
+    const component = shallow(
       <Counter
         increment={() => false}
         incrementAsync={incrementAsync}

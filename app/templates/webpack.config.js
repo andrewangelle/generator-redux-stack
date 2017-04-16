@@ -19,9 +19,6 @@ const config = port => ({
   devServer: {
     port,
     hot: true,
-    stats: {
-      colors: true,
-    },
     historyApiFallback: true
   },
   plugins: [

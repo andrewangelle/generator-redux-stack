@@ -9,8 +9,8 @@ import ImportExportMonitor from 'redux-import-export-monitor';
 export default createDevTools(
   <DockMonitor
     toggleVisibilityKey="ctrl-h"
-    changePositionKey="ctrl-m"
     changeMonitorKey="ctrl-c"
+    changePositionKey="ctrl-m"
     defaultIsVisible={false}
   >
     <LogMonitor />

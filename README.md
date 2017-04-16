@@ -80,13 +80,10 @@ $ yo redux-stack:actions
 
 ### Keyboard Shortcuts
 
-<kbd>ctrl</kbd> + <kbd>h</kbd> - Show/hide `redux-devtools` dock
-
-<kbd>ctrl</kbd> + <kbd>c</kbd> - Change `redux-devtools` monitor
-
-<kbd>ctrl</kbd> + <kbd>m</kbd> - Move `redux-devtools` dock
-
-<kbd>ctrl</kbd> + <kbd>e</kbd> - Show redux import/export tool
++ <kbd>ctrl</kbd> + <kbd>h</kbd> - Show/hide `redux-devtools` dock
++ <kbd>ctrl</kbd> + <kbd>c</kbd> - Change `redux-devtools` monitor
++ <kbd>ctrl</kbd> + <kbd>m</kbd> - Move `redux-devtools` dock
++ <kbd>ctrl</kbd> + <kbd>e</kbd> - Show redux import/export tool
 
 ## License
 

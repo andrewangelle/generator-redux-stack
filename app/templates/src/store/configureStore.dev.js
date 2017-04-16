@@ -1,8 +1,8 @@
 import { createStore, applyMiddleware, compose } from 'redux';
-import thunk from 'redux-thunk';
-import createLogger from 'redux-logger';
-import createHistory from 'history/createBrowserHistory';
 import { routerMiddleware } from 'react-router-redux';
+import thunk from 'redux-thunk';
+import createHistory from 'history/createBrowserHistory';
+import createLogger from 'redux-logger';
 import { persistState } from 'redux-devtools';
 import rootReducer from '../reducers';
 import DevTools from '../containers/DevTools';
